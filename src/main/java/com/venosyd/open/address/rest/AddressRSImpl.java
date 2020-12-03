@@ -74,7 +74,8 @@ public class AddressRSImpl implements AddressRS, RESTService {
 
                 return makeResponse(result);
             } else {
-                return makeErrorResponse("Falha ao carregar estados");
+                result.put("status", "nothing found");
+                return makeResponse(result);
             }
         }, "getStates");
 
@@ -93,7 +94,8 @@ public class AddressRSImpl implements AddressRS, RESTService {
 
                 return makeResponse(result);
             } else {
-                return makeErrorResponse("Falha ao carregar cidades");
+                result.put("status", "nothing found");
+                return makeResponse(result);
             }
         }, "getCities");
 
@@ -112,7 +114,8 @@ public class AddressRSImpl implements AddressRS, RESTService {
 
                 return makeResponse(result);
             } else {
-                return makeErrorResponse("Falha ao carregar distritos");
+                result.put("status", "nothing found");
+                return makeResponse(result);
             }
         }, "getDistricts");
 
