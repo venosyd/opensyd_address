@@ -50,8 +50,13 @@ public class AddressRSImpl implements AddressRS, RESTService {
                 result.put("payload", returned + "");
 
                 return makeResponse(result);
-            } else {
-                return makeErrorResponse("Falha ao carregar Logradouro");
+            }
+            //
+            else {
+                var result = new HashMap<String, String>();
+                result.put("status", "nothing found");
+
+                return makeResponse(result);
             }
         }, "getLogradouro");
     }
