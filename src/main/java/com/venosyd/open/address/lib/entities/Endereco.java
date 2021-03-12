@@ -7,7 +7,7 @@ import com.venosyd.open.entities.infra.SerializableEntity;
  * 
  *         nomes em portugues para diferenciar da biblioteca anterior
  * 
- *         venosyd © 2016-2020
+ *         venosyd © 2016-2021
  */
 public class Endereco extends SerializableEntity {
 
